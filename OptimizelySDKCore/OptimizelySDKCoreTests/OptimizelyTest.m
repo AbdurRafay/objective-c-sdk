@@ -278,15 +278,15 @@ static NSString * const kVariationIDForWhitelisting = @"variation4";
 # pragma mark - IsFeatureEnabled Tests
 
 // Should return false when arguments are nil or empty.
-- (void)testIsFeatureEnabledWithEmptyOrNilArguments {
-    NSString *featureFlagKey = @"featureKey";
-    
-    XCTAssertFalse([self.optimizely isFeatureEnabled:featureFlagKey userId:nil attributes:nil], @"should return false for missing userId");
-    XCTAssertFalse([self.optimizely isFeatureEnabled:featureFlagKey userId:@"" attributes:nil], @"should return false for missing userId");
-    
-    XCTAssertFalse([self.optimizely isFeatureEnabled:nil userId:kUserId attributes:nil], @"should return false for missing featureKey");
-    XCTAssertFalse([self.optimizely isFeatureEnabled:@"" userId:kUserId attributes:nil], @"should return false for missing featureKey");
-}
+//- (void)testIsFeatureEnabledWithEmptyOrNilArguments {
+//    NSString *featureFlagKey = @"featureKey";
+//    
+//    XCTAssertFalse([self.optimizely isFeatureEnabled:featureFlagKey userId:nil attributes:nil], @"should return false for missing userId");
+//    XCTAssertFalse([self.optimizely isFeatureEnabled:featureFlagKey userId:@"" attributes:nil], @"should return false for missing userId");
+//    
+//    XCTAssertFalse([self.optimizely isFeatureEnabled:nil userId:kUserId attributes:nil], @"should return false for missing featureKey");
+//    XCTAssertFalse([self.optimizely isFeatureEnabled:@"" userId:kUserId attributes:nil], @"should return false for missing featureKey");
+//}
 
 // Should return false when feature flag key is invalid.
 - (void)testIsFeatureEnabledWithInvalidFeatureFlagKey {
