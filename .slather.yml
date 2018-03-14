@@ -1,3 +1,5 @@
+ci_service: travis_ci
+ci_access_token: AZjohYADPKQAwMGZApzXR7cEaIaKvOsBJ
 coverage_service: coveralls
 xcodeproj: OptimizelySDKCore/OptimizelySDKCore.xcodeproj
 scheme: OptimizelySDKCoreiOS
