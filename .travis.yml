@@ -11,7 +11,9 @@ env:
     - SCHEME=OptimizelySDKiOS-Universal TEST_SDK=iphonesimulator PLATFORM='iOS Simulator' OS=9.3 NAME='iPhone 6s'
     - SCHEME=OptimizelySDKTVOS TEST_SDK=appletvsimulator PLATFORM='tvOS Simulator' OS=10.2 NAME='Apple TV 1080p'
     - SCHEME=OptimizelySDKTVOS-Universal TEST_SDK=appletvsimulator PLATFORM='tvOS Simulator' OS=9.2 NAME='Apple TV 1080p'
-before_install: rvm use $RVM_RUBY_VERSION
+before_install: 
+  - rvm use $RVM_RUBY_VERSION
+  - gem install slather --no-rdoc --no-ri --no-document --quiet
 install: bundle install --without=documentation --path ../travis_bundle_dir
 script:
   - pod spec lint --quick
